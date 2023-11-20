@@ -1,5 +1,6 @@
 package com.example.mymemory.models
 
+
 enum class BoardSize(val numCards: Int){
     EASY(8),
     Medium(18),
@@ -16,8 +17,10 @@ enum class BoardSize(val numCards: Int){
     }
 
     fun getHeight(): Int {
-        return numCards/getWidth()
+        return numCards / getWidth()
     }
+
+
 
     fun getNumPairs(): Int {
         return numCards/ 2

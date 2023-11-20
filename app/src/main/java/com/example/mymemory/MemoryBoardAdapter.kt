@@ -52,7 +52,7 @@ class MemoryBoardAdapter(
         private val imageButton4 = itemView.findViewById<ImageButton>(R.id.imageButton4)
         fun bind(position: Int) {
             val memoryCard = cards[position]
-            imageButton4.setImageResource(if (memoryCard.isFaceup) memoryCard.identifier else R.drawable.ic_launcher_background)
+            imageButton4.setImageResource(if (memoryCard.isFaceup) memoryCard.identifier else R.drawable.braincard)
 
             imageButton4.alpha = if (memoryCard.isMatched) .4f else 1.0f
             val colorStateList =  if (memoryCard.isMatched) ContextCompat.getColorStateList(context, R.color.color_gray) else null

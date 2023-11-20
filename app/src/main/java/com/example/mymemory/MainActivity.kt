@@ -3,6 +3,8 @@ package com.example.mymemory
 import android.animation.ArgbEvaluator
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -21,7 +23,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mymemory.models.BoardSize
 import com.example.mymemory.models.MemoryGame
-
+import com.github.jinatonic.confetti.CommonConfetti
 
 
 class MainActivity : ComponentActivity() {
@@ -169,6 +171,7 @@ class MainActivity : ComponentActivity() {
             tvNumPairs.text = "Pairs: ${memoryGame.numPairsFound} / ${boardSize.getNumPairs()}"
             if (memoryGame.haveWonGame()) {
                 Toast.makeText(clRoot.getContext(), "You won!!", Toast.LENGTH_LONG).show()
+                CommonConfetti.rainingConfetti(clRoot, intArrayOf(Color.YELLOW, Color.GREEN, Color.MAGENTA)).oneShot()
                 Log.i(TAG, "You won!!")
             //Snackbar.make(clRoot, "You won!!", Snackbar.LENGTH_LONG).show()
             }

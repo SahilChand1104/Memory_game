@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Memory"
+rootProject.name = "Crazy Matching"
 include(":app")
