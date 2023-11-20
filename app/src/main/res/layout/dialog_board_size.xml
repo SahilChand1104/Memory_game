@@ -33,6 +33,12 @@
             android:layout_height="48dp"
             android:text="Hard (6x4)" />
 
+        <RadioButton
+            android:id="@+id/rdExtreme"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Extreme (6x6)" />
+
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

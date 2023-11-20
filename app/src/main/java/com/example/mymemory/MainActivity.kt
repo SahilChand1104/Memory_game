@@ -65,6 +65,10 @@ class MainActivity : ComponentActivity() {
                 tvNumMoves.text = "Hard: 6 x 4"
                 tvNumPairs.text = "Pairs: 0 / 12"
             }
+            BoardSize.EXTREME -> {
+                tvNumMoves.text = "EXTREME: 6 x 6"
+                tvNumPairs.text = "Pairs: 0 / 36"
+            }
         }
         tvNumPairs.setTextColor(ContextCompat.getColor(this,R.color.color_progress_none))
         memoryGame = MemoryGame(boardSize)
@@ -114,13 +118,15 @@ class MainActivity : ComponentActivity() {
             BoardSize.EASY -> radioGroupSize.check(R.id.rbEasy)
             BoardSize.Medium -> radioGroupSize.check(R.id.rbMedium)
             BoardSize.HARD -> radioGroupSize.check(R.id.rbHard)
+            BoardSize.EXTREME -> radioGroupSize.check(R.id.rdExtreme)
         }
         showAlertDialog("Choose new size", boardSizeView, View.OnClickListener {
             //set new value for board size
             boardSize = when (radioGroupSize.checkedRadioButtonId){
                 R.id.rbEasy -> BoardSize.EASY
                 R.id.rbMedium -> BoardSize.Medium
-                else -> BoardSize.HARD
+                R.id.rbHard -> BoardSize.HARD
+                else -> BoardSize.EXTREME
 
             }
             setupBoard()

@@ -14,5 +14,11 @@ val DEFAULT_ICONS = listOf(
     R.drawable.ic_voicemail,
     R.drawable.ic_volcano,
     R.drawable.ic_water,
-    R.drawable.ic_wifi
+    R.drawable.ic_wifi,
+    R.drawable.ic_circle,
+    R.drawable.ic_phone,
+    R.drawable.ic_rocket,
+    R.drawable.ic_dive,
+    R.drawable.ic_spa,
+    R.drawable.ic_t
 )
